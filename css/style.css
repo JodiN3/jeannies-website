@@ -8,68 +8,97 @@
 
 html, body{
   overflow-x: hidden;
+  height: 100%;
   margin:0;
+  background-image: url("../assets/background_repeat-small.png");
+  background-repeat: repeat;
 }
 
 h1 {
   font-family: 'Sacramento', cursive;
   color: #5D5F29;
-  line-height: 40px;
+  font-size: 50px
   margin-bottom: 30px;
 }
 
-body {
+p {
   font-family: 'Montserrat', Helvetica, Arial, sans-serif;
-  color: #FFFFFF;
+  color: #A65215;
   line-height: 24px;
   font-weight: 200;
 }
+
+/* HEADER/NAVBAR */
+header {
+
+}
+
+/* IMAGE SCROLLER */
+.photo-size {
+  height: 100px;
+}
+slideshow {
+
+}
+
+/* PRODUCTS */
+.products {
+
+
+}
+
 /* BUTTONS */
-.btn {
+
+.top-button {
   border-radius: 4px;
-  color: #FFFFFF;
+  color: #346C6C;
   font-weight: 400;
   text-decoration: none;
   padding: 10px 30px;
   background: #0ED8CF;
   box-shadow: 1px 2px 0px 0px #9B9B9B;
 }
-.btn:hover {
+
+.order-button {
+
+}
+.order-button:hover {
   color: #FFFFFF;
   background: #4A4A4A;
 }
-@media only screen and (max-width: 500px) {
-    .gridmenu {
-        width:100%;
-    }
 
-    .gridmain {
-        width:100%;
-    }
+/* PHONE ORDER */
+.phone-order {
+  font-family: 'Permanent+Marker', Helvetica, Arial, sans-serif;
+  color: #346C6C;
+  line-height: 24px;
+  font-weight: 200;
 
-    .gridright {
-        width:100%;
-      }
+
 }
 
+/* INFO BOXES */
+.info-box {
+
+
+}
 
 /* FOOTER */
-footer {
-  background-color: #1A5D69;
-  height: 156px;
-  position: relative;
-  overflow: hidden;
-  z-index: 0;
+.container {
+  display: flex;
+  background-color: #EFE0B9;
+  height: 167px;
 }
-footer p, .one-third, a{
-  color: #FFFFFF;
-  font-size: 14px;
-  font-weight: 100;
+
+.flex-container 1{
+  margin: 10px;
   text-align: left;
-  margin: 10px 10px 0;
+  line-height: 20px;
+  font-size: 12px;
 }
+
 footer i {
-  color: #FFFFFF;
+  color: #A65215;
   font-size: 26px;
   margin-top: 0;
 }
@@ -82,8 +111,23 @@ footer .logo  {
     text-align: left;
   }
   footer .right-footer-block {
-    background-color: #1A5D69;
+    background-color: #EFE0B9;
   }
+
+  @media only screen and (max-width: 500px) {
+      .gridmenu {
+          width:100%;
+      }
+
+      .gridmain {
+          width:100%;
+      }
+
+      .gridright {
+          width:100%;
+        }
+  }
+
 
 
 /* DASHBOARD */
