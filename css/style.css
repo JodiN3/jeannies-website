@@ -6,6 +6,12 @@
    light tan EFE0B9
    rust A65215 */
 
+/*fonts
+  font-family: 'Permanent Marker', cursive;
+  font-family: 'Sacramento', cursive;
+  font-family: 'Montserrat', sans-serif;*/
+
+
 html, body{
   overflow-x: hidden;
   height: 100%;
@@ -22,20 +28,77 @@ h1 {
 }
 
 p {
-  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
-  color: #A65215;
-  line-height: 24px;
+  font-family: 'Montserrat', sans-serif;
+  color: black;
+  line-height: 5px;
   font-weight: 200;
+}
+
+body {
+  font-weight: 400;
+  color: #231F20;
+  line-height: 24px;
+}
+/* GRID */
+.container {
+  vertical-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 5px;
+  padding-right: 5px;
+  position: relative;
+}
+.container:before, .container:after {
+  content: " ";
+  display: table;
+}
+.container:after {
+  clear: both;
+}
+.one-half, .one-third, .one-fourth {
+  font-family: 'Montserrat', sans-serif;
+  width: 96%;
+  float: left;
+  position: relative;
+  min-height: 1px;
+  margin: 10px 2% 20px;
+  vertical-align: left;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+  .one-half {
+    width: 46%;
+  }
+  .one-third {
+    width:29.33333%;
+  }
+  .one-fourth {
+    width:21%;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width:1170px;
+  }
 }
 
 /* HEADER/NAVBAR */
 header {
 
+
+
 }
 
 /* IMAGE SCROLLER */
 .photo-size {
-  height: 100px;
+  size: 50px;
 }
 slideshow {
 
@@ -43,6 +106,7 @@ slideshow {
 
 /* PRODUCTS */
 .products {
+  text-align: center;
 
 
 }
@@ -68,50 +132,70 @@ slideshow {
 }
 
 /* PHONE ORDER */
-.phone-order {
-  font-family: 'Permanent+Marker', Helvetica, Arial, sans-serif;
+.phone-order .one-third {
+  font-family: 'Permanent Marker', cursive;
   color: #346C6C;
+  font-size: 24px;
   line-height: 24px;
-  font-weight: 200;
-
-
+  text-align: center;
+}
+.phone-order .left {
+  text-align: left;
+  margin: 0,0,0,0;
+}
+.phone-order .middle {
+  text-align: center;
+  margin: 0,0,0,0;
+}
+.phone-order .right {
+  text-align: right;
+  margin: 0,0,0,0;
 }
 
 /* INFO BOXES */
 .info-box {
 
 
+
 }
 
 /* FOOTER */
-.container {
-  display: flex;
+footer {
   background-color: #EFE0B9;
   height: 167px;
-}
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+  }
 
-.flex-container 1{
-  margin: 10px;
-  text-align: left;
-  line-height: 20px;
-  font-size: 12px;
-}
+  footer .one-third {
+    color: #512C73;
+    font-size: 18px;
+    font-weight: 100;
+    text-align: left;
+    margin: 20px 0 0 0;
+  }
 
-footer i {
-  color: #A65215;
-  font-size: 26px;
-  margin-top: 0;
-}
-footer .logo  {
-  padding: 1em 0 1em 5em;
+  footer .icons a {
+  margin: 50px 0 0 10px;
+  padding-right: 10px;
+  display: inline-block;
   text-align: right;
 }
-  footer p, footer nav ul{
-    padding: 2em 0;
-    text-align: left;
+  footer .icons i {
+  color: #A65215;
+  font-size: 30px;
   }
-  footer .right-footer-block {
-    background-color: #EFE0B9;
+  footer p {
+   color: #A65215;
+   font-size: 12px;
+   margin: 60px 0 0 0;
+   text-align: left;
+  }
+  footer .logo {
+  width: 50px;
+  height: 50px;
+  text-align: right;
   }
 
   @media only screen and (max-width: 500px) {
@@ -130,7 +214,7 @@ footer .logo  {
 
 
 
-/* DASHBOARD */
+/* keeparoo DASHBOARD */
 
 /* LEFT NAVBAR */
 .left-nav {
