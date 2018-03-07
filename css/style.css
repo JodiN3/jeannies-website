@@ -11,13 +11,6 @@
   font-family: 'Sacramento', cursive;
   font-family: 'Montserrat', sans-serif;*/
 
-#wrapper {
-  margin-left: auto;
-  margin-right: auto;
-  width:960px;
-  min-width: 100%;
-}
-
 body {
   background-image: url("../assets/background_repeat-small.png");
   background-repeat: repeat;
@@ -65,7 +58,6 @@ h3 {
   font-weight: normal;
   text-rendering: optimizeLegibility;
 }
-
 
 p {
   font-family: 'Montserrat', sans-serif;
