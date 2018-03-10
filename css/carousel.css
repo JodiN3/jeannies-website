@@ -27,7 +27,6 @@ section.awSlider ol{
   color: #5D5F29;
 }
 
-
 section.awSlider:hover > img{
   -ms-transform: scale(1.2);
   -webkit-transform: scale(1.2);
