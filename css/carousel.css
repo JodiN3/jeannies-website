@@ -25,6 +25,7 @@ section.awSlider a{
 
 section.awSlider ol{
   color: #5D5F29;
+  bottom: 5px;
 }
 
 section.awSlider:hover > img{
