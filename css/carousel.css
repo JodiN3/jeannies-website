@@ -8,7 +8,7 @@ section.awSlider .carousel{
 
 section.awSlider{
   margin:30px auto;
-  padding: 0px, 0, 30px, 0;
+  padding: 0;
   position:relative;
   display:table;
   -webkit-touch-callout: none;
