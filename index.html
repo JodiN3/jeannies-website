@@ -7,7 +7,7 @@
     <title>Jeannie's Baked Goods</title>
 
 <!-- CSS -->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500i|Permanent+Marker|Sacramento|Oswald:400,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:700,700i,900|Lobster" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/carousel.css">
@@ -29,38 +29,31 @@
 
 <section class="header-box">
 
-  <div class="container">
+  <div class="scallop">
 
-    <div class="column nav-l-r">
-        <a href="index.html"><img class="site-logo" src="./assets/Logo-Top-small.png" alt="Jeannies"/></a>
+    <div class="site-logo">
+      <a href="index.html"><img class="site-logo" src="./assets/Logo.png" alt="Jeannies"/></a>
     </div>
 
-    <div class="column nav-middle">
-      <img class="nav-banner" src="./assets/navBar_banner.png"/>
-
+    <div class="container">
+      <img class="nav-banner" src="./assets/banner.png"/>
+      <h2>Old-Fashioned Goodness</h2>
     </div>
 
-    <div class="column nav-l-r">
-        <a href="#"><img class="order-banner" src="./assets/placeOrder_banner-small.png"/></a>
+    <div class="menu-buttons">
+        <ul>
+            <li class="Home"><a href="#">Home</a></li>
+            <li class="Products"><a href="#">Products</a></li>
+            <li class="Find Us"><a href="#">Find Us</a></li>
+            <li class="About"><a href="#">About</a></li>
+            <li class="Contact"><a href="#">Contact</a></li>
+        </ul>
     </div>
+
   </div>
-</section>
 
-
-<section class="menu-buttons">
-
-  <div class="container">
-    <div class="column.full">
-
-    <ul>
-        <li><a href="#">Breads</a></li>
-        <li><a href="#">Sweets</a></li>
-        <li><a href="#">Specialties</a></li>
-        <li><a href="#">Find Us</a></li>
-        <li><a href="#">About</a></li>
-    </ul>
+  <div class="after-scallop">
   </div>
-</div>
 
 </section>
 
@@ -100,202 +93,158 @@
     </div>
   </section>
 
-  <!-- products -->
+<!-- phone order -->
+<section class="phone-order">
+
+  <div class="container">
+    <h1>Home Deliveries</h1>
+    <h3>We do home deliveries every Wednesday!</br>
+        Please call 555-555-0000 & leave a message with your order.</h3>
+  </div>
+
+</section>
+
+
+<!-- products -->
 
 <section class="products">
 
-<!-- products-breads -->
+  <!-- products-breads -->
   <div class="container">
 
-    <div class="column full">
-      <img class="head" src="./assets/head_breads.png"/>
+      <div class="head">
+        <h1>Breads</h1>
+        <p>Jeannie’s handmade breads are made with wholesome ingredients  and baked fresh for you! Over ten flavors including gluten free and kale are offered to satisfy your tastebuds.  <span><a>View all Breads</a></span></p>
+      </div>
+
+    <div class="column one">
+      <div class="box">
+          <img class="box-pic" src="./assets/white_bread.png"/>
+          <h4>Country White</h4>
+          <div class="order-button"><a href="#">Order Now</a></div>
+      </div>
     </div>
 
-      <div class="column one">
-        <div class="box">
-              <img class="box-pic" src="./assets/white_bread.png"/>
-              <h2>White</h2>
-            <div class="button">
-              <a href="#">Order Now</a>
-            </div>
-        </div>
+    <div class="column two">
+      <div class="box">
+          <img class="box-pic" src="./assets/cinn_bread.png"/>
+          <h4>Cinnamon</h4>
+          <div class="order-button"><a href="#">Order Now</a></div>
       </div>
+    </div>
 
-      <div class="column two">
-        <div class="box">
-              <img class="box-pic" src="./assets/cinn_bread.png"/>
-              <h2>Cinnamon</h2>
-            <div class="button">
-              <a href="#">Order Now</a>
-            </div>
-        </div>
+    <div class="column three">
+      <div class="box">
+          <img class="box-pic" src="./assets/wheat_bread.png"/>
+          <h4>Honey Wheat</h4>
+          <div class="order-button"><a href="#">Order Now</a></div>
       </div>
-
-      <div class="column three">
-        <div class="box">
-              <img class="box-pic" src="./assets/wheat_bread.png"/>
-              <h2>Honey Wheat</h2>
-            <div class="button a">
-              <a href="#">Order Now</a>
-            </div>
-        </div>
-      </div>
-      <div class="row">
-        <a href="#"><p>View all breads</p></a>
-      </div>
+    </div>
   </div>
 
   <!-- products-sweets -->
   <div class="container">
 
     <div class="column full">
-      <img class="head" src="./assets/head_sweets.png"/>
+      <div class="head">
+        <h1>Sweets</h1>
+        <p>Jeannie’s handmade sweets are made with love to satisfy your sweet tooth! Every week there something new to try but Cinnabuns are a steady favorite!  <span><a>View all Sweets</a></span></p>
+      </div>
     </div>
 
     <div class="column one">
       <div class="box">
-            <img class="box-pic" src="./assets/cinnabun.png"/>
-            <h2>Cinnabuns</h2>
-          <div class="button">
-            <a href="#">Order Now</a>
-          </div>
+          <img class="box-pic" src="./assets/cinnabun.png"/>
+          <h4>Cinnabuns</h4>
+          <div class="order-button"><a href="#">Order Now</a></div>
       </div>
     </div>
 
     <div class="column two">
       <div class="box">
-            <img class="box-pic" src="./assets/cookies.png"/>
-            <h2>Cookies</h2>
-          <div class="button">
-            <a href="#">Order Now</a>
-          </div>
+          <img class="box-pic" src="./assets/cookies.png"/>
+          <h4>Cookies</h4>
+          <div class="order-button"><a href="#">Order Now</a></div>
       </div>
     </div>
 
     <div class="column three">
       <div class="box">
-            <img class="box-pic" src="./assets/pie.png"/>
-            <h2>Pies</h2>
-          <div class="button">
-            <a href="#">Order Now</a>
-          </div>
+          <img class="box-pic" src="./assets/pie.png"/>
+          <h4>Pies</h4>
+          <div class="order-button"><a href="#">Order Now</a></div>
       </div>
     </div>
-    <div class="row">
-      <p>View all sweets</p>
-    </div>
-
   </div>
 
   <!-- products-specialties -->
   <div class="container">
 
     <div class="column full">
-      <img class="head" src="./assets/head_specialties.png"/>
+      <div class="head">
+        <h1>Specialties</h1>
+        <p>Jeannie’s homemade specialties can vary from parbaked pizza crusts to mini cakes and even cupcakes. Holidays always brings something new and creative.  <span><a>View all Breads</a></span></p>
+      </div>
     </div>
 
     <div class="column one">
       <div class="box">
-            <img class="box-pic" src="./assets/pizza_crust.png"/>
-            <h2>Pizza Crusts</h2>
-          <div class="button">
-            <a href="#">Order Now</a>
-          </div>
+          <img class="box-pic" src="./assets/pizza_crust.png"/>
+          <h4>Pizza Crusts</h4>
+          <div class="order-button"><a href="#">Order Now</a></div>
       </div>
     </div>
 
     <div class="column two">
       <div class="box">
-            <img class="box-pic" src="./assets/bundt_cake.png"/>
-            <h2>Cakes</h2>
-          <div class="button">
-            <a href="#">Order Now</a>
-          </div>
+          <img class="box-pic" src="./assets/bundt_cake.png"/>
+          <h4>Cakes</h4>
+          <div class="order-button"><a href="#">Order Now</a></div>
       </div>
     </div>
 
     <div class="column three">
       <div class="box">
-            <img class="box-pic" src="./assets/cake_pops.png"/>
-            <h2>Cake Pops</h2>
-          <div class="button">
-            <a href="#">Order Now</a>
-          </div>
+          <img class="box-pic" src="./assets/cake_pops.png"/>
+          <h4>Cake Pops</h4>
+          <div class="order-button"><a href="#">Order Now</a></div>
       </div>
-    </div>
-    <div class="row">
-      <p>View all specialties</p>
     </div>
   </div>
 
 </section>
 
-  <!-- phone order -->
-<section class="phone-order">
+  <!-- information rows -->
+<section class="info-row">
 
   <div class="container">
-
-    <div class="column third">
-        <img class="left" src="./assets/curlyQ-L-color.png"/>
-    </div>
-
-    <div class="column middle">
-      <h2>We do home deliveries every Wednesday</h2>
-      <h2>Please call 989-916-6840 & leave a message</h2>
-    </div>
-
-    <div class="column third">
-      <img class="right" src="./assets/curlyQ-R-color.png"/>
-    </div>
-
+      <div class="head">
+        <h1>About</h1>
+        <img src="./assets/Mom-HeadShot.png">
+        <p> Hi there!</br>My name is Jeannie and I’m the head baker. I learned how to bake from my grandma when I was a little girl and haven’t stop since.<span><a>...more</a></span></p>
+      </div>
   </div>
 
-</section>
+  <div class="container">
+      <div class="head">
+        <h1>Find Us</h1>
+        <img class="AFM-truck" src="./assets/AFM-Truck_Logo-small.png" alt="AFM Logo"/>
+        <p>Jeannie’s Baked Goods can be found at the Alpena Farmers’ Market on Wednesdays and Saturdays. Go to their website for more information.</p>
+        <span><a>alpenasfarmersmarket.com</a></span>
+      </div>
+  </div>
 
-  <!-- info boxes -->
-<section class="info-box">
-
-      <div class="column half">
-        <div class="container left">
-          <img class="head" src="./assets/head_findUs.png"/>
-            <div class="find">
-              <img class="AFM-truck" src="./assets/AFM-Truck_Logo-small.png" alt="AFM Logo"/>
-              <a href="#"><p>alpenasfarmersmarket.com</p></a>
-              <a href="#"><h3>Click here for map</h3></a>
-            </div>
+  <div class="container">
+      <div class="head">
+        <h1>Reviews</h1>
+        <div class="reviews">
+          <p>Hi there!</br>“I have been a long time customer of Jeannie’s and I love her! Jean’s breads are always the freshest and taste delicious!”</br>-Stella B.<span></span></p>
+          <i href="#"><i class="fas fa-chevron-left"></i></i>
+          <i href="#"><i class="fas fa-chevron-right"></i></i>
         </div>
       </div>
+  </div>
 
-      <div class="column half">
-        <div class="container right">
-          <img class="head" src="./assets/head_more.png"/>
-            <div class="more">
-              <p>Jeannie’s Baked Goods is a home-based business that follows the Cottage Industry Food guidelines for the State of Michigan.</p>
-              <img src="./assets/cottage_logo.png">
-              <a href="#"><h3>Click here for more info</h3></a>
-            </div>
-        </div>
-      </div>
-
-      <div class="column half">
-        <div class="container left">
-          <img class="head" src="./assets/head_about.png"/>
-            <div class="about">
-              <img src="./assets/Mom-HeadShot.png">
-              <p>Hi there!</br>My name is Jeannie and I’m the head baker. I learned how to bake from my grandma when I was a little girl and haven’t stop since.</p>
-              <a href="#"><h3>...more</h3></a>
-            </div>
-        </div>
-      </div>
-
-      <div class="column half">
-        <div class="container right">
-          <img class="head" src="./assets/head_reviews.png"/>
-            <div class="review-box"
-              <p>“I have been a long time customer of Jeannie’s Baked Goods and I love them! Her breads are always the freshest and taste delicious!”</br>-Stella B.</p>
-              <a href="#"><h3>See all reviews</h3></a>
-            </div>
-        </div>
 </section>
 
   <!-- Footer -->
@@ -304,23 +253,21 @@
     <div class="container">
 
       <div class="column third">
-        <a href="#">About Us</a> | <a href="#">  Contact Us</a></br>
-        <a href="#">Terms</a> | <a href="#">Privacy Policy</a>
-        <p>&copy; 2018. JojoBlu3. All Rights Reserved.</p>
+        <a href="#">About Us</a> <span>|</span> <a href="#">  Contact Us</a></br>
+        <a href="#">Terms</a> <span>|</span> <a href="#">Privacy Policy</a>
       </div>
 
-      <div class="column middle">
+      <div class="column third">
+        <img class="nav-banner" src="./assets/banner.png"/></br>
         <i href="#"><i class="fas fa-phone"></i></i>
         <i href="#"><i class="fas fa-envelope"></i></i>
         <i href="#"><i class="fab fa-facebook"></i></i>
         <i href="#"><i class="fab fa-twitter"></i></i>
       </div>
 
-      <div class="column third">
-        <div class="logo">
-          <img src="./assets/Logo-footer.png" alt="Jeannies Baked Goods"/>
+        <div class="column third">
+          <p>&copy; 2018. JojoBlu3. All Rights Reserved.</p>
         </div>
-      </div>
     </div>
 
   </footer>

@@ -1,6 +1,7 @@
 /*colors
    lt gray #ABAAAA
    green #5D5F29
+   lt green-background #BFC1AA
    purple #473150
    teal #346C6C
    blackish brown (text) #231F20
@@ -8,10 +9,9 @@
    rust #A65215 */
 
 /*fonts
-  font-family: 'Permanent Marker', cursive;
-  font-family: 'Sacramento', cursive;
-  font-family: 'Montserrat', sans-serif;*/
-
+    font-family: 'Lato', sans-serif;
+    font-family: 'Lobster', cursive;
+]
 /* 3 @MEDIA QUERIES - MOBILE, TABLET, DESKTOP */
 
 /*--------------------------------*/
@@ -28,62 +28,69 @@
 }
 
 body {
-  background-image: url("../assets/background_repeat-2.png");
-  background-repeat: repeat;
+  background-color: #BFC1AA;
   text-align: center;
-  padding: 0;
+  padding: 20px 0;
   margin: auto;
   width: 100%;
 }
 
 img {
-  border: 0;
-  max-width: 98%;
 }
 
 a {
   color: #EEDFB8;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 a:hover {
-  color: #FFFFFF;
+  color: #EEDFB8;
   text-decoration: none;
 }
 
 h1 {
-  font-family: 'Sacramento', cursive;
-  color: #5D5F29;
-  font-size: 50px;
+  font-family: 'Lobster';
+  color: #A65215;
+  font-size: 38pt;
   font-weight: normal;
+  line-height: 0;
 }
 
 h2 {
-  font-family: 'Permanent Marker', cursive;
+  font-family: 'Lobster';
   font-size: 20pt;
   font-weight: normal;
-  color: #000000;
-  padding-top: 15px;
-  margin: 0 0 61px;
+  color: #5D5F29;
+  padding-top: 0px;
+  margin: auto;
 }
 
 h3 {
-  font-family: 'Montserrat', sans-serif;
-  font-style: italic;
-  font-size: 18pt;
-  color: #000000;
-  text-decoration: underline;
+  font-family: 'Lobster';
+  font-size: 38pt;
+  color: #346C6C;
   font-weight: normal;
+}
+
+h4 {
+  font-family: 'Lato';
+  font-size: 32pt;
+  font-weight: bold;
+  color: #A65215;
+  padding-top: 15px;
+  margin: auto;
 }
 
 p {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 24pt;
-  color: #000;
+  font-family: 'Lato';
+  font-style: italic;
+  font-size: 14pt;
+  color: #231F20;
   font-weight: normal;
+  text-align: center;
 }
 
-/* container */
+/* container - all formats */
 .container {
   width: 90%;
   margin: auto;
@@ -109,268 +116,248 @@ p {
 }
 
 /* HEADER/NAVBAR - all formats */
-.header-box .container {
-  padding: 0;
-  margin: 10px;
-  display: inline-block;
-  background-image: url("../assets/vintage-concrete.png");
-  box-shadow: 3px 3px 0px 0px rgba(0,0,0,0.20);
-  text-align: center;
- }
-
 .header-box .site-logo {
-  padding: 15px 0;
+  padding: 5px 0;
   width: 100%;
-  max-width: 150px;
-  min-width: 100px;
+  max-width: 100px;
+  min-width: 95px;
   vertical-align: middle;
   margin: auto;
 }
 
 .header-box .nav-banner {
+  max-width: 300px;
+  min-width: 200px;
+}
+
+.header-box h2{
+  text-align: center;
+  margin: -1.75em auto 1em;
+  font-size: 22pt;
+}
+
+.scallop {
+  position:relative;
+  background: #EEDFB8;
+  padding:10px;
+}
+
+.scallop::after {
+  position:absolute;
+  bottom: -50px;
+  left: 0px;
   width: 100%;
-  margin-top: 10px;
-  padding: 5px 15px;
+  content:" ";
+  background:
+  radial-gradient(circle at 50% 0%, #EEDFB8 25%, #BFC1AA 26%, #BFC1AA 40%);
+  background-size:50px 100px;
+  height:50px;
+  background-repeat: repeat-x;
+}
+
+.after-scallop{
+  padding:25px;
   margin: auto;
 }
 
 .menu-buttons {
-  width: 100%;
-  font-family: 'Oswald';
-  font-weight: 200;
-  text-shadow: 0px 2px 1px rgba(0,0,0,0.20);
+  width: 98%;
+  font-family: 'Lato';
+  font-weight: bold;
   text-decoration: none;
-  margin: auto;
-  /* text-align: center; */
+  margin: 0 auto;
+  text-align: center;
+  display: inline-block
+}
+
+.menu-buttons ul {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+}
+
+.menu-buttons li {
+  font-size: 1.2em;
+  line-height: 35px;
+  height: 35px;
+  background: #346C6C;
+  margin: .5em .25em;
+  border-radius: 18px;
 }
 
 .menu-buttons a {
   text-decoration:none;
-  font-size: 1.4em;
-  transition:color .3s ease-in-out;
+  color: #EEDFB8;
+  display: block;
+  transition: .3s background-color;
+  border-radius: 18px;
 }
 
-.menu-buttons ul {
-  width: 80%;
-  list-style: none;
+.menu-buttons a:hover {
+  background-color: #BFC1AA;
+  color: #346C6C;
+}
+
+.menu-buttons a.active {
+  background-color: #BFC1AA;
+  cursor: default;
+}
+
+/*CAROUSEL */
+.carousel {
+  width: 75%;
   text-align: center;
-  display: inline-block;
+  margin: auto;
 }
 
-.menu-buttons li {
-  position:relative;
-  float:left;
-  padding: 5px;
-  margin: .5em 0;
-  cursor:pointer;
-  background: #473150;
-  text-align:center;
-  border-radius:18px;
-  box-shadow: 0em -.1em 0 .1em rgba(0, 0, 0, .2);
-}
+/* PHONE ORDER - all formats */
 
-.menu-buttons a:hover li{
-  border: 3px dotted #FFFFFF;
+.phone-order .container {
   background: #EEDFB8;
-  padding: 5px 30px;
-  margin: 0;
-  border-radius:18px;
-  color: #473150;
+  border-top: 1px dashed #A65215;
+  border-bottom: 1px dashed #A65215;
+  padding: 20px 0;
+  outline: 1px dashed darken($color,10);
+  margin: 10px auto;
 }
 
-/* button {
-	border: 3px solid #3a7999;
+.phone-order h1 {
+  font-size: 28pt;
+  margin: auto;
+  padding: 10px 0;
 }
-button:hover {
-	border: 3px dotted #3a7999;
-	color: #3a7999;
-	background: rgba(0,0,0,0);
-} */
 
-
-.header-box .order-banner {
-  vertical-align: top;
-  margin: 15px auto;
-  width: 100%;
+.phone-order h3 {
+  font-size: 18pt;
+  margin: 10px auto;
+  padding: 10px 0;
 }
 
 /* PRODUCTS - all formats */
 .products .container {
   padding-bottom: 10px;
-  margin-top: 5em;
+  margin-top: 0em;
   display: inline-block;
-  background-image: url("../assets/vintage-concrete.png");
-  box-shadow: 3px 3px 0px 0px rgba(0,0,0,0.20);
   text-align: center;
 }
 
-.products .head {
-  width: 100%;
-  max-width: 190px;
-  min-width: 150px;
-  margin-top: -50px;
-  margin: auto;
+.products .head h1 {
+  font-size: 18pt;
+  color: #A65215;
+  margin: 30px auto;
+}
+
+.products .head p {
+  font-size: 12pt;
+  margin: 15px auto;
+  padding: 0;
+  color: #231F20;
+}
+
+.products span a{
+  font-weight: bold;
+  color: #346C6C;
 }
 
 .products .box {
   background: white;
-  box-shadow: 5px 5px 6px 0px rgba(0,0,0,0.20);
   width: 100%;
-  max-height: 270px;
-  max-width: 225px;
-  padding-top: 15px;
-  margin: auto;
+  max-height: 350px;
+  max-width: 276px;
+  padding: 15px 0;
+  margin: 30px auto;
 }
 
 .products .box-pic {
   width: 100%;
-  max-width: 198px;
+  max-width: 247px;
   text-align: center;
 }
 
-.products h2 {
-  font-family: 'Permanent Marker', cursive;
+.products h4 {
   font-size: 18pt;
-  color: #000000;
-  padding-top: 6px;
-  margin: 5px 0 30px 0;
+  margin: 10px auto;
+  padding: 10px 0 0px;
 }
 
-.products .button {
-  border-radius: 10px;
-  color: #EEDFB8;
-  font-size: 16pt;
+.products .order-button a{
+  border-radius: 18px;
+  font-size: 14pt;
   font-weight: 400;
-  padding: 6px 24px 10px 24px;
-  height: 45px;
+  padding: 5px 15px;
+  height: 40px;
   width: 8em;
-  margin: auto;
-  margin-top: 40px;
-  background: #473150;
-  box-shadow: 1px 2px 0px 0px rgba(0,0,0,0.20);
+  margin: 20px auto;
+  background: #346C6C;
+  text-decoration: none;
 }
 
-.products :hover {
+.products a:hover {
   color: #FFFFFF;
 }
 
-.products .row p {
-  padding: 24px 0 0 5px;
-  font-style:italic;
-  font-size: 12pt;
-  font-weight: bold;
-  text-decoration: underline;
-  color: #A65215;
-  position: relative;
-  text-align: center;
-}
-
-/* PHONE ORDER - all formats */
-.phone-order .container {
-  vertical-align: middle;
-  display: block;
-  text-align: center;
-  padding: 15px 0;
-}
-
-.phone-order .left, .right {
-  padding: 0;
+/* INFORMATION ROWS - all formats */
+.info-row .container {
   width: 50%;
-  max-width: 155px;
-  min-width: 50px;
-  float: none;
-}
-
-.phone-order h2 {
-  color: #346C6C;
-  text-align: center;
-  line-height: 30px;
-  margin: auto;
-  padding: 5px 0;
-}
-
-/* INFO BOXES - all formats */
-.info-box .container.left, .container.right {
   padding-bottom: 10px;
-  margin-top: 5em;
+  margin-top: 0em;
   display: inline-block;
-  background-image: url("../assets/vintage-concrete.png");
-  box-shadow: 3px 3px 0px 0px rgba(0,0,0,0.20);
   text-align: center;
 }
 
-.info-box .container.left, container.right {
-  float: none;
-}
-.info-box .head {
-  width: 100%;
-  max-width: 190px;
-  min-width: 150px;
-  margin: -50px auto 0;
+.info-row .head h1 {
+  font-size: 18pt;
+  color: #A65215;
+  margin: 30px auto;
 }
 
-.info-box .AFM-truck {
+.info-row .head p {
+  font-size: 12pt;
+  margin: 15px 40px;
+  padding: 0;
+  color: #231F20;
+}
+
+.info-row span a{
+  font-size: 14pt;
+  font-weight: bold;
+  color: #346C6C;
+}
+
+.info-row i {
+  color: #346C6C;
+  font-size: 12pt;
+  padding: 0 5px;
+}
+
+.info-row .AFM-truck {
   width: 100%;
   max-width: 280px;
   min-width: 200px;
   padding: 10px;
 }
 
-.info-box .review-box {
-  font-style: italic;
-  padding: 44px 15px 15px 15px;
-  line-height: 20px;
-  background: #EFE0B9;
-  box-shadow: 5px 5px 6px 0px rgba(0,0,0,0.20);
-  height: 200px;
-  margin: 25px 15px 15px 15px;
+.info-row .reviews {
+  background: #EEDFB8;
+  padding: 20px 34px;
+  margin: 15px auto;
 }
 
-.info-box p {
-  padding: 18px;
-  font-size: 10pt;
-  font-weight: 200;
-  line-height: 20px;
-  margin: 10px auto;
-}
-
-.info-box a {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 14pt;
-  color: #231F20;
-  font-weight: normal;
-  line-height: 26px;
-}
-
-.info-box h3 {
-  color: #346C6C;
-  font-size: 10pt;
-  margin-top: 10px;
-}
 
 /* Footer- all formats */
 footer .container {
-  background-image: url("../assets/vintage-concrete.png");
-  box-shadow: 3px 3px 0px 0px rgba(0,0,0,0.20);
+  background: #EEDFB8;
   padding: 5px;
   height: 100%;
-  max-height: 146px;
+  max-height: 250px;
   margin: 20px auto;
   display: inline-block;
   text-align: center;
 }
 
-footer h2 {
-  font-family: 'Montserrat', sans-serif;
-  color: #A65215;
-  font-size: 14pt;
-  line-height: 30px;
-  margin: auto;
-}
-
 footer a {
-  font-size: 18px;
-  font-weight: 200;
+  font-size: 12px;
+  font-weight: 300;
   color: #A65215;
   margin: auto;
   padding-right: 20px;
@@ -382,24 +369,27 @@ footer i {
   margin: 13px auto;
   padding: 10px;
   color: #A65215;
-  font-size: 22px;
-  height: 1.5em;
+  font-size: 18px;
+  height: 1em;
+}
+
+footer span {
+  color: #A65215;
+  font-size: 12px;
 }
 
 footer p {
  color: #A65215;
- font-size: 12px;
- margin-top: 20px;
- margin-auto;
+ font-size: 6pt;
+ margin-top: 15px;
+ margin: auto;
 }
 
-footer .logo {
-  margin: 30px auto 0;
+footer .nav-banner {
   width: 100%;
-  max-width: 170px;
-  min-width: 100px;
-  padding: 5px;
-  text-align: middle;
+  max-width: 200px;
+  min-width: 75px
+  margin: 5px auto;
 }
 
 /*-----------------------------------------------------------------------------------*/
@@ -415,77 +405,103 @@ footer .logo {
     .column.two { width: 100%; }
     .column.three { width: 100%; }
     .column.middle { width: 100%; }
-    .column.fourth { width: 100%; }
 
       /* HEADER/NAVBAR - max600 */
       .header-box .site-logo {
-        max-width: 180px;
-        min-width: 100px;
-        padding-bottom: 5px;
+        max-width: 100px;
+        min-width: 75px;
+        padding-bottom: 0;
       }
 
       .header-box .nav-banner {
-        max-width: 400px;
-        min-width: 235px;
+        max-width: 375px;
+        min-width: 250px;
       }
 
-      .menu-buttons ul {
-        padding: 0 8px;
-        margin: auto;
-      }
+      .header-box h2 {
+        font-size: 14pt;
+        margin: -1.75em auto .5em;
 
-      .menu-buttons ul, li {
-        width: 20em;
-        margin: 1em 0;
-        padding: 1em 0;
-      }
-
-      .header-box .order-banner {
-        display: none;
-        /* min-width: 80px;
-        margin-top: 0; */
       }
 
   /* CAROUSEL - see carousel.css */
 
-  /* PRODUCTS - max600 */
-      .products .head {
-        max-width: 190px;
-        min-width: 150px;
-        margin-top: -45px;
-      }
+  /*CAROUSEL  - max600 */
+  .carousel {
+    width: 90%;
+    text-align: center;
+    margin: auto;
+  }
 
-      .products .box {
-        display: inline-block;
-        margin-top: 42px;
-      }
+  section.awSlider a{
+    width: 6%;
+  }
+
+  section.awSlider ol{
+    color: #5D5F29;
+    margin-bottom: 2px;
+  }
+
+  .carousel-indicators li {
+    width: 6px;
+    height: 6px;
+  }
+
+  .carousel-indicators .active {
+    width: 6px;
+    height: 6px;
+  }
+
+  .carousel-control .left .right {
+    width: 6px;
+    height: 6px;
+  }
 
 /* PHONE ORDER - max600 */
-      .phone-order .container {
-        margin: auto;
-        padding-top: 45px;
-      }
+.phone-order .container {
+
+}
+
+.phone-order h1 {
+  padding: 10px 0;
+  font-size: 18pt;
+}
+
+.phone-order h3 {
+  font-size: 14pt;
+  margin: 2px auto;
+  line-height: 25px;
+}
+
+/* PRODUCTS - max600 */
+.products .head p {
+  padding: 0 40px;
+}
+
+.products .box {
+  width: 65%;
+  margin: 20px auto;
+}
+
+.products .box-pic {
+  width: 84%;
+}
+
+.products h4 {
+  font-size: 14pt;
+}
+
+.products .order-button a{
+  font-size: 12pt;
+}
 
   /* NFO BOXES - max600 */
-      .info-box .container.left, .container.right {
-        max-width: 400px;
-        min-width: 400px;
-        min-height: 320px;
-        padding: 10px;
-      }
-
-      .info-box .head {
-        max-width: 190px;
-        min-width: 150px;
-        margin-top: -45px;
-      }
+  .info-row .container {
+    width: 75%;
+  }
 
   /* FOOTER - max600 */
-      footer .logo {
-        max-width: 170px;
-        min-width: 100px;
-        padding: 5px;
-      }
+
     }
 
 /*-----------------------------------------------------------------------------------*/
@@ -495,113 +511,124 @@ footer .logo {
 
     .column.full { width: 100%; }
     .column.half { width: 100%; }
-    .column.third { width: 100%; }
+
+    .column.third {
+      width: 30%;
+      display: inline-block;
+    }
 
     .column.one {
-      width: 50%;
+      width: 45%;
       display: inline-block;
-      float: left;
     }
     .column.two {
-      width: 50%;
+      width: 45%;
       display: inline-block;
     }
 
     .column.three {
-      width: 100%;
+      width: 45%;
       display: inline-block;
       text-align: center;
      }
 
-    .column.middle { width: 100%; }
-    .column.fourth { width: 100%; }
+    .column.middle {
+      width: 30%;
+      display: inline-block;
+    }
 
   /* HEADER/NAVBAR - max1199 */
+
       .header-box .site-logo {
-        max-width: 240px;
-        min-width: 150px;
+        max-width: 115px;
+        min-width: 75px;
       }
 
       .header-box .nav-banner {
-        max-width: 800px;
-        min-width: 480px;
+        max-width: 400px;
+        min-width: 250px;
+      }
+
+      .header-box h2 {
+        font-size: 16pt;
+        margin: -1.75em auto .5em;
       }
 
       .menu-buttons ul {
-        padding: 0 8px;
-        margin: auto;
+        overflow: auto;
+        width: 550px;
+        margin: 0 auto;
       }
 
-      .menu-buttons ul, li {
-        width: 30em;
-        margin: auto;
-        padding: 0;
-      }
-
-      .header-box .order-banner {
-        display: none;
-        /* max-width: 100px;
-        min-width: 75px; */
+      .menu-buttons li {
+        float: left;
+        width: 100px;
+        border-bottom: none;
+        height: 35px;
+        font-size: 1em;
+        text-align: center;
       }
 
   /* CAROUSEL - see carousel.css */
 
+  .phone-order .container {
+  }
+
+  .phone-order h1 {
+    margin: auto;
+    padding: 10px 0;
+    font-size: 18pt;
+  }
+
+  .phone-order h3 {
+    font-size: 14pt;
+  }
+
   /* PRODUCTS - max1199 */
-      .products .head {
-        max-width: 190px;
-        min-width: 150px;
-        margin: -50px auto 0;
-      }
+  .products .head p {
+    padding: 0 50px;
+  }
 
-      .products .box {
-        display: block;
-        margin: 30px auto 0;
-      }
+  .products .box {
+    width: 78%;
+    margin: 20px auto;
+  }
 
-      .products .row p{
-        margin: 5px auto 10px;
-      }
+  .products .box-pic {
+    width: 84%;
+  }
+
+  .products h4 {
+    font-size: 14pt;
+  }
+
+  .products .order-button a{
+    font-size: 12pt;
+  }
+
 
   /* INFO BOXES - max1199 */
-      .info-box .container.left, .container.right {
-        max-width: 580px;
-        min-width: 580px;
-        min-height: 350px
-        padding: 10px;
-      }
-
-      .info-box .head {
-        max-width: 200px;
-        min-width: 150px;
-        margin-top: -45px;
-      }
-
-      .info-box p {
-        padding: 18px 18px 8px 18px;
-        font-size: 14pt;
-        line-height: 22px;
-      }
-
-      .info-box a {
-        font-size: 16pt;
-        line-height: 26px;
-      }
-
-      .info-box h3 {
-        font-size: 16pt;
-        margin-top: 10px;
-      }
-
-      .info-box .review-box {
-        margin: 22px 15px 15px 15px;
-      }
+  .info-row .container {
+    width: 65%;
+  }
 
   /* FOOTER - max1199  */
-      footer .logo {
-        margin: 30px auto 0;
-        max-width: 200px;
-        min-width: 100px;
-      }
+  footer a {
+font-size: 10px;
+font-weight: 200;
+padding: 0 10px;
+  }
+
+  footer i {
+font-size: 14px;
+height: .5em;
+  }
+
+  footer p {
+font-size: 5pt;
+float: right;
+  }
+
     }
 
 /*-----------------------------------------------------------------------------------*/
@@ -611,28 +638,14 @@ footer .logo {
 
     .column.full { width: 100%; }
 
-    .column.nav-middle {
-        width: 56%;
-        display: inline-block;
-        float: left;
-    }
     .column.half {
         width: 50%;
         display: inline-block;
-        float: left;
-    }
-
-    .column.nav-l-r {
-        width: 22%;
-        display: inline-block;
-        float: left;
-        z-index: 20;
     }
 
     .column.one {
         width: 33%;
         display: inline-block;
-        float: left;
     }
 
     .column.two {
@@ -649,160 +662,97 @@ footer .logo {
         width: 30%;
         display: inline-block;
         float: left;
+        padding-top: 50px;
     }
 
     .column.middle {
         width: 40%;
         display: inline-block;
-        float: left;
         padding: 30px 0px;
     }
 
   /* HEADER/NAVBAR - min1200 */
       .header-box .container {
-        height: 10em;
-        margin: 2em 0;
+        text-align: center;
       }
 
       .header-box .site-logo {
-          max-width: 310px;
-          min-width: 240px;
-          width: 107%;
-          padding: 0 20px;
-          float: top;
+          max-width: 100px;
+          min-width: 75px;
+          width: 90%;
+          margin: auto;
       }
 
       .header-box .nav-banner {
-          max-width: 625px;
-          min-width: 480px;
+          max-width: 555px;
+          min-width: 200px;
           margin: auto;
-          padding-top: 26px;
-          padding-bottom: 10px;
+          padding-top: 0;
+          padding-bottom: 0;
       }
 
-      .menu-buttons {
-          font-size: 15px;
-          padding: 0;
-          margin: 0 0 0 21em;
-      }
-
-      .menu-buttons ul {
-          padding: 0 8px;
-          margin: auto;
-          display: inline;
+      .header-box h2{
+        text-align: center;
+        padding-top: -10px;
       }
 
       .menu-buttons li {
-          margin: 0 1em;
-    }
-
-      .menu-buttons ul, li {
-          width: 8em;
-          margin: auto;
-          padding: 0;
+        width: 120px;
+        border-bottom: none;
+        height: 50px;
+        line-height: 50px;
+        font-size: 1.4em;
       }
 
-      .header-box .order-banner {
-          max-width: 130px;
-          min-width: 100px;
-          float: right;
-          padding-right: 1em;
-          margin-top: 0;
-          margin-right: 1em;
+       .menu-buttons li {
+        float: left;
+      }
+      .menu-buttons ul {
+        overflow: auto;
+        width: 650px;
+        margin: 0 auto;
       }
 
   /* CAROUSEL - see carousel.css */
 
-  /* PRODUCTS - min 1200 */
-      .products .container {
-        padding: 10px 90px;
-      }
+  /* PHONE ORDER - min 1200 */
 
-      .products .head {
-          max-width: 190px;
-          min-width: 150px;
-          margin-top: -50px;
+  .phone-order .container {
+  }
+
+  .phone-order h1 {
+    padding: 10px 0;
+    font-size: 18pt;
+  }
+
+  .phone-order h3 {
+    font-size: 14pt;
+  }
+
+
+  /* PRODUCTS - min 1200 */
+
+  .products .head p {
+    font-size: 14pt;
+    padding: 0 100px;
+  }
+
+      .products .container {
       }
 
       .products .box {
-          display: block;
-          margin: 20px auto;
-      }
-
-  /* PHONE ORDER - min 1200 */
-      .phone-order .container {
-          margin: auto;
-      }
-
-      .phone-order .left{
-          padding: 20px 10px;
-          margin-top: 4em;
-          vertical-align: middle;
-          width: 100%;
-          max-width: 230px;
-          min-width: 150px;      }
-
-      .phone-order .right {
-          padding: 20px 10px;
-          margin-top: 4em;
-          vertical-align: middle;
-          width: 100%;
-          max-width: 230px;
-          min-width: 150px;
-      }
-
-      .phone-order h2{
-          font-size: 40px;
-          line-height: 47px;
-          padding: 17px 0;
-          margin: auto;
-          text-align: center;
       }
 
   /* INFO/BOXES - min 1200 */
-      .info-box .container.left, .container.right {
-          display: inline-block;
-          max-width: 500px;
-          min-width: 500px;
-          height: 355px;
-          margin: 0 0 6em 0;
-          padding: 10px;
+      .info-row {
+
+
       }
 
-      .info-box .head {
-          max-width: 190px;
-          min-width: 150px;
-          margin-top: -50px;
-      }
-
-      .info-box .AFM-truck {
+      .info-row .AFM-truck {
           max-width: 300px;
           min-width: 200px;
           padding: 10px;
-      }
-
-      .info-box .review-box {
-          padding: 44px 15px 15px 15px;
-          line-height: 20px;
-          height: 210px;
-          margin: 25px;
-      }
-
-      .info-box p {
-          padding: 18px;
-          font-size: 11pt;
-          font-weight: 200;
-          line-height: 20px;
-      }
-
-      .info-box a {
-          font-size: 14pt;
-          line-height: 26px;
-      }
-
-      .info-box h3 {
-          font-size: 10pt;
-          margin-top: 10px;
       }
 
   /* FOOTER - min 1200 */
@@ -813,6 +763,13 @@ footer .logo {
           padding: 0;
       }
 
+      footer .nav-banner {
+        width: 100%;
+        max-width: 200px;
+        min-width: 75px
+        margin: 5px auto;
+      }
+
       footer i {
           padding-right: 35;
           font-size: 25px;
@@ -821,7 +778,6 @@ footer .logo {
       }
 
       footer a{
-          text-align: left;
           margin: 15px;
           padding: 25px;
           font-size: 18px;
@@ -831,16 +787,9 @@ footer .logo {
          font-size: 12px;
          text-align: left;
          vertical-align: bottom;
-         padding-top: 42px;
-         margin-left: 15px;
+         padding-top: 55px;
+         margin: 0 15px;
+         float: right;
       }
 
-      footer .logo {
-          max-width: 150px;
-          min-width: 90px;
-          float: right;
-          vertical-align: middle;
-          padding: 8px 15px 2px 0;
-          margin: auto;
-      }
     }
