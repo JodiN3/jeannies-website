@@ -35,9 +35,6 @@ body {
   width: 100%;
 }
 
-img {
-}
-
 a {
   color: #EEDFB8;
   text-decoration: none;
@@ -139,7 +136,6 @@ p {
 .scallop {
   position:relative;
   background: #EEDFB8;
-  padding:10px;
 }
 
 .scallop::after {
@@ -160,37 +156,27 @@ p {
   margin: auto;
 }
 
-.menu-buttons {
+.menu-buttons .container{
   width: 98%;
   font-family: 'Lato';
   font-weight: bold;
   text-decoration: none;
   margin: 0 auto;
   text-align: center;
-  display: inline-block
-}
-
-.menu-buttons ul {
-  list-style: none;
-  text-align: center;
-  padding: 0;
-}
-
-.menu-buttons li {
-  font-size: 1.2em;
-  line-height: 35px;
-  height: 35px;
-  background: #346C6C;
-  margin: .5em .25em;
-  border-radius: 18px;
+  display: block;
+  font-size: 14pt;
 }
 
 .menu-buttons a {
   text-decoration:none;
-  color: #EEDFB8;
-  display: block;
-  transition: .3s background-color;
-  border-radius: 18px;
+  color: #346C6C;
+  float: left;
+}
+
+.menu-buttons .space {
+  padding: 0 15px;
+  float: left;
+  color: #346C6C;
 }
 
 .menu-buttons a:hover {
@@ -200,18 +186,18 @@ p {
 
 .menu-buttons a.active {
   background-color: #BFC1AA;
+  color: #346C6C;
   cursor: default;
 }
 
 /*CAROUSEL */
 .carousel {
-  width: 75%;
+  width: 70%;
   text-align: center;
   margin: auto;
 }
 
 /* PHONE ORDER - all formats */
-
 .phone-order .container {
   background: #EEDFB8;
   border-top: 1px dashed #A65215;
@@ -222,13 +208,14 @@ p {
 }
 
 .phone-order h1 {
-  font-size: 28pt;
+  font-size: 20pt;
   margin: auto;
   padding: 10px 0;
 }
 
 .phone-order h3 {
   font-size: 18pt;
+  line-height: 30px;
   margin: 10px auto;
   padding: 10px 0;
 }
@@ -236,13 +223,13 @@ p {
 /* PRODUCTS - all formats */
 .products .container {
   padding-bottom: 10px;
-  margin-top: 0em;
+  margin-top: 0;
   display: inline-block;
   text-align: center;
 }
 
 .products .head h1 {
-  font-size: 18pt;
+  font-size: 20pt;
   color: #A65215;
   margin: 30px auto;
 }
@@ -254,9 +241,15 @@ p {
   color: #231F20;
 }
 
-.products span a{
+.products a {
   font-weight: bold;
   color: #346C6C;
+  float: none;
+}
+
+.products .view {
+  color: #EEDFB8;
+  float: none;
 }
 
 .products .box {
@@ -275,14 +268,14 @@ p {
 }
 
 .products h4 {
-  font-size: 18pt;
+  font-size: 12pt;
   margin: 10px auto;
   padding: 10px 0 0px;
 }
 
 .products .order-button a{
   border-radius: 18px;
-  font-size: 14pt;
+  font-size: 12pt;
   font-weight: 400;
   padding: 5px 15px;
   height: 40px;
@@ -290,6 +283,7 @@ p {
   margin: 20px auto;
   background: #346C6C;
   text-decoration: none;
+  color: #EEDFB8;
 }
 
 .products a:hover {
@@ -297,54 +291,58 @@ p {
 }
 
 /* INFORMATION ROWS - all formats */
-.info-row .container {
-  width: 50%;
+.info-box .container {
   padding-bottom: 10px;
-  margin-top: 0em;
+  margin-top: 0;
   display: inline-block;
   text-align: center;
 }
 
-.info-row .head h1 {
+.info-box h1 {
   font-size: 18pt;
   color: #A65215;
   margin: 30px auto;
 }
 
-.info-row .head p {
+.info-box p {
   font-size: 12pt;
   margin: 15px 40px;
   padding: 0;
   color: #231F20;
 }
 
-.info-row span a{
+.info-box .more {
   font-size: 14pt;
   font-weight: bold;
   color: #346C6C;
+  padding-top: 10px;
 }
 
-.info-row i {
+.info-box a {
+  font-size: 14pt;
+  font-weight: bold;
+  color: #346C6C;
+  padding-top: 10px;
+}
+
+.info-box i {
   color: #346C6C;
   font-size: 12pt;
   padding: 0 5px;
 }
 
-.info-row .AFM-truck {
+.info-box .AFM-truck {
   width: 100%;
-  max-width: 280px;
-  min-width: 200px;
-  padding: 10px;
 }
 
-.info-row .reviews {
-  background: #EEDFB8;
+.info-box .reviews p{
+  background: rgba(255, 255, 255, 0.5);
   padding: 20px 34px;
-  margin: 15px auto;
+  margin: 15px auto 25px;
+  width: 40%;
 }
 
-
-/* Footer- all formats */
+/* FOOTER- all formats */
 footer .container {
   background: #EEDFB8;
   padding: 5px;
@@ -360,22 +358,22 @@ footer a {
   font-weight: 300;
   color: #A65215;
   margin: auto;
-  padding-right: 20px;
-  padding-left: 20px;
+  float: none;
 }
 
 footer i {
   vertical-align: top;
   margin: 13px auto;
-  padding: 10px;
+  padding-bottom: 10px;
   color: #A65215;
   font-size: 18px;
   height: 1em;
 }
 
-footer span {
+footer .space {
   color: #A65215;
   font-size: 12px;
+  padding: 0 15px;
 }
 
 footer p {
@@ -385,11 +383,13 @@ footer p {
  margin: auto;
 }
 
-footer .nav-banner {
+footer .footer-banner img{
   width: 100%;
-  max-width: 200px;
-  min-width: 75px
-  margin: 5px auto;
+  max-width: 220px;
+  min-width: 75px;
+  margin: 0 auto;
+  vertical-align: middle;
+  padding-bottom: 10px;
 }
 
 /*-----------------------------------------------------------------------------------*/
@@ -406,103 +406,149 @@ footer .nav-banner {
     .column.three { width: 100%; }
     .column.middle { width: 100%; }
 
-      /* HEADER/NAVBAR - max600 */
-      .header-box .site-logo {
+  /* HEADER/NAVBAR - max600 */
+    .menu-buttons .container {
+        padding: 0 44px;
+        font-size: 10pt;
+    }
+
+    .menu-buttons a {
+        float: none;
+    }
+
+    .menu-buttons .space {
+        padding: 0 5px;
+        float: none;
+    }
+
+    .header-box .site-logo {
         max-width: 100px;
         min-width: 75px;
         padding-bottom: 0;
-      }
+    }
 
-      .header-box .nav-banner {
+    .header-box .nav-banner {
         max-width: 375px;
         min-width: 250px;
-      }
+    }
 
-      .header-box h2 {
+    .header-box h2 {
         font-size: 14pt;
         margin: -1.75em auto .5em;
+    }
 
-      }
+    /* CAROUSEL - see carousel.css */
 
-  /* CAROUSEL - see carousel.css */
+    /*CAROUSEL  - max600 */
+    .carousel {
+        width: 90%;
+        text-align: center;
+        margin: auto;
+    }
 
-  /*CAROUSEL  - max600 */
-  .carousel {
-    width: 90%;
-    text-align: center;
-    margin: auto;
-  }
+    section.awSlider a{
+        width: 6%;
+    }
 
-  section.awSlider a{
-    width: 6%;
-  }
+    section.awSlider ol{
+        color: #5D5F29;
+        margin-bottom: 2px;
+    }
 
-  section.awSlider ol{
-    color: #5D5F29;
-    margin-bottom: 2px;
-  }
+    .carousel-indicators li {
+        width: 6px;
+        height: 6px;
+    }
 
-  .carousel-indicators li {
-    width: 6px;
-    height: 6px;
-  }
+    .carousel-indicators .active {
+        width: 6px;
+        height: 6px;
+    }
 
-  .carousel-indicators .active {
-    width: 6px;
-    height: 6px;
-  }
+    .carousel-control .left .right {
+        width: 6px;
+        height: 6px;
+    }
 
-  .carousel-control .left .right {
-    width: 6px;
-    height: 6px;
-  }
+  /* PHONE ORDER - max600 */
+    .phone-order h1 {
+        padding: 10px 0;
+        font-size: 18pt;
+    }
 
-/* PHONE ORDER - max600 */
-.phone-order .container {
+    .phone-order h3 {
+        font-size: 12pt;
+        margin: 2px auto;
+        line-height: 25px;
+    }
 
-}
+  /* PRODUCTS - max600 */
+    .products .head p {
+        padding: 0 40px;
+    }
 
-.phone-order h1 {
-  padding: 10px 0;
-  font-size: 18pt;
-}
+    .products .box {
+        width: 65%;
+        margin: 20px auto;
+    }
 
-.phone-order h3 {
-  font-size: 14pt;
-  margin: 2px auto;
-  line-height: 25px;
-}
+    .products .box-pic {
+        width: 84%;
+    }
 
-/* PRODUCTS - max600 */
-.products .head p {
-  padding: 0 40px;
-}
+    .products .order-button a{
+        font-size: 11pt;
+        padding: 4px 12px;
+        height: 35px;
+    }
 
-.products .box {
-  width: 65%;
-  margin: 20px auto;
-}
+  /* INFO BOXES - max600 */
+    .info-box .AFM-truck {
+        max-width: 215px;
+        min-width: 100px;
+    }
 
-.products .box-pic {
-  width: 84%;
-}
-
-.products h4 {
-  font-size: 14pt;
-}
-
-.products .order-button a{
-  font-size: 12pt;
-}
-
-  /* NFO BOXES - max600 */
-  .info-row .container {
-    width: 75%;
-  }
+    .info-box .reviews p{
+        width: 50%;
+    }
 
   /* FOOTER - max600 */
-
+    footer .container {
+        margin: auto;
+        padding: 0;
     }
+
+    footer .footer-banner img {
+        width: 115%;
+        max-width: 215px;
+        min-width: 75px;
+        padding: 10px 0 0 0;
+    }
+
+    footer a {
+        font-size: 10px;
+        font-weight: 200;
+        padding: 0 3px;
+    }
+
+    footer .space {
+        font-size: 10px;
+        padding: 0 5px;
+    }
+
+    footer i {
+        padding: 0 10px;
+        font-size: 14px;
+        height: 6px;
+        vertical-align: middle;
+    }
+
+    footer p {
+        font-size: 10px;
+        padding: 10px 0 5px 0;
+        margin: 0 auto;
+    }
+  }
 
 /*-----------------------------------------------------------------------------------*/
 /* RESPONSIVE-IPADS/TABLETS (min601/max1199)
@@ -510,126 +556,150 @@ footer .nav-banner {
 @media only screen and (min-width: 601px) and (max-width: 1199px) {
 
     .column.full { width: 100%; }
-    .column.half { width: 100%; }
+
+    .column.half {
+        width: 45%;
+        display: inline-block;
+        vertical-align: top;
+    }
 
     .column.third {
-      width: 30%;
-      display: inline-block;
+        width: 30%;
+        display: inline-block;
+        padding: 10px;
+        vertical-align: middle;
     }
 
     .column.one {
-      width: 45%;
-      display: inline-block;
+        width: 45%;
+        display: inline-block;
     }
     .column.two {
-      width: 45%;
-      display: inline-block;
+        width: 45%;
+        display: inline-block;
     }
 
     .column.three {
-      width: 45%;
-      display: inline-block;
-      text-align: center;
+        width: 45%;
+        display: inline-block;
+        text-align: center;
      }
 
     .column.middle {
-      width: 30%;
-      display: inline-block;
+        width: 30%;
+        display: inline-block;
     }
 
   /* HEADER/NAVBAR - max1199 */
+    .menu-buttons .container {
+        padding: 0 44px;
+        font-size: 12pt;
+    }
 
-      .header-box .site-logo {
+    .menu-buttons a {
+        float: none;
+    }
+
+    .menu-buttons .space {
+        padding: 0 5px;
+        float: none;
+    }
+
+    .header-box .site-logo {
         max-width: 115px;
         min-width: 75px;
-      }
+    }
 
-      .header-box .nav-banner {
+    .header-box .nav-banner {
         max-width: 400px;
         min-width: 250px;
-      }
+    }
 
-      .header-box h2 {
+    .header-box h2 {
         font-size: 16pt;
         margin: -1.75em auto .5em;
-      }
-
-      .menu-buttons ul {
-        overflow: auto;
-        width: 550px;
-        margin: 0 auto;
-      }
-
-      .menu-buttons li {
-        float: left;
-        width: 100px;
-        border-bottom: none;
-        height: 35px;
-        font-size: 1em;
-        text-align: center;
-      }
+    }
 
   /* CAROUSEL - see carousel.css */
 
-  .phone-order .container {
-  }
-
-  .phone-order h1 {
-    margin: auto;
-    padding: 10px 0;
-    font-size: 18pt;
-  }
-
-  .phone-order h3 {
-    font-size: 14pt;
-  }
+  /* PHONE ORDER - max1199 */
+    .phone-order .container {
+        width: 80%;
+    }
 
   /* PRODUCTS - max1199 */
-  .products .head p {
-    padding: 0 50px;
-  }
+    .products .head p {
+        font-size: 14pt;
+        padding: 0 10em;
+    }
 
-  .products .box {
-    width: 78%;
-    margin: 20px auto;
-  }
+    .products .box {
+        width: 78%;
+        margin: 20px auto;
+    }
 
-  .products .box-pic {
-    width: 84%;
-  }
+    .products .box-pic {
+        width: 84%;
+    }
 
-  .products h4 {
-    font-size: 14pt;
-  }
+    .products h4 {
+        font-size: 14pt;
+    }
 
-  .products .order-button a{
-    font-size: 12pt;
-  }
+    .products .order-button a{
+        font-size: 12pt;
+    }
 
 
   /* INFO BOXES - max1199 */
-  .info-row .container {
-    width: 65%;
-  }
+    .info-box .AFM-truck {
+        max-width: 215px;
+        min-width: 100px;
+    }
+
+    .info-box .reviews p{
+        width: 60%;
+    }
+
 
   /* FOOTER - max1199  */
-  footer a {
-font-size: 10px;
-font-weight: 200;
-padding: 0 10px;
-  }
-
-  footer i {
-font-size: 14px;
-height: .5em;
-  }
-
-  footer p {
-font-size: 5pt;
-float: right;
-  }
-
+    footer .container {
+        margin: auto;
+        padding: 0;
     }
+
+    footer .footer-banner img {
+        width: 115%;
+        max-width: 215px;
+        min-width: 75px;
+    }
+
+    footer a {
+        font-size: 12px;
+        font-weight: 200;
+        padding: 0 10px;
+    }
+
+    footer .space {
+        padding: 0 5px;
+    }
+
+    footer i {
+        padding: 10px 20px;
+        font-size: 14px;
+        height: .5em;
+        vertical-align: middle;
+    }
+
+    footer p {
+        font-size: 10px;
+        text-align: left;
+        vertical-align: bottom;
+        padding-top: 55px;
+        margin: 0 15px;
+        float: right;
+    }
+}
 
 /*-----------------------------------------------------------------------------------*/
 /* RESPONSIVE-LAPTOPS/DESKTOPS (min1200px)
@@ -639,8 +709,9 @@ float: right;
     .column.full { width: 100%; }
 
     .column.half {
-        width: 50%;
+        width: 45%;
         display: inline-block;
+        vertical-align: top;
     }
 
     .column.one {
@@ -656,140 +727,112 @@ float: right;
     .column.three {
         width: 33%;
         display: inline-block;
-     }
+    }
 
     .column.third {
         width: 30%;
         display: inline-block;
-        float: left;
-        padding-top: 50px;
+        padding: 20px;
+        vertical-align: middle;
     }
 
     .column.middle {
-        width: 40%;
+        width: 38%;
         display: inline-block;
-        padding: 30px 0px;
     }
 
   /* HEADER/NAVBAR - min1200 */
-      .header-box .container {
+    .header-box .container {
         text-align: center;
-      }
+    }
 
-      .header-box .site-logo {
-          max-width: 100px;
-          min-width: 75px;
-          width: 90%;
-          margin: auto;
-      }
+    .header-box .site-logo {
+        max-width: 130px;
+        min-width: 115px;
+    }
 
-      .header-box .nav-banner {
-          max-width: 555px;
-          min-width: 200px;
-          margin: auto;
-          padding-top: 0;
-          padding-bottom: 0;
-      }
+    .header-box .nav-banner {
+        max-width: 560px;
+        min-width: 250px;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
 
-      .header-box h2{
+    .header-box h2{
+        font-size: 22pt;
         text-align: center;
         padding-top: -10px;
-      }
+    }
 
-      .menu-buttons li {
+    .menu-buttons li {
         width: 120px;
         border-bottom: none;
         height: 50px;
         line-height: 50px;
         font-size: 1.4em;
-      }
+    }
 
-       .menu-buttons li {
+    .menu-buttons li {
         float: left;
-      }
-      .menu-buttons ul {
+    }
+
+    .menu-buttons ul {
         overflow: auto;
         width: 650px;
         margin: 0 auto;
-      }
+    }
 
   /* CAROUSEL - see carousel.css */
 
   /* PHONE ORDER - min 1200 */
+    .phone-order .container {
+        width: 80%;
+    }
 
-  .phone-order .container {
-  }
-
-  .phone-order h1 {
-    padding: 10px 0;
-    font-size: 18pt;
-  }
-
-  .phone-order h3 {
-    font-size: 14pt;
-  }
-
+    .phone-order h3 {
+        font-size: 14pt;
+    }
 
   /* PRODUCTS - min 1200 */
-
-  .products .head p {
-    font-size: 14pt;
-    padding: 0 100px;
-  }
-
-      .products .container {
-      }
-
-      .products .box {
-      }
+    .products .head p {
+        font-size: 14pt;
+        padding: 0 10em;
+    }
 
   /* INFO/BOXES - min 1200 */
-      .info-row {
-
-
-      }
-
-      .info-row .AFM-truck {
-          max-width: 300px;
-          min-width: 200px;
-          padding: 10px;
-      }
+    .info-box .AFM-truck {
+        max-width: 215px;
+        min-width: 100px;
+    }
 
   /* FOOTER - min 1200 */
-      footer .container {
-          display: inline-block;
-          text-align: center;
-          margin: auto;
-          padding: 0;
-      }
-
-      footer .nav-banner {
-        width: 100%;
-        max-width: 200px;
-        min-width: 75px
-        margin: 5px auto;
-      }
-
-      footer i {
-          padding-right: 35;
-          font-size: 25px;
-          height: 1em;
-          vertical-align: middle;
-      }
-
-      footer a{
-          margin: 15px;
-          padding: 25px;
-          font-size: 18px;
-      }
-
-      footer p {
-         font-size: 12px;
-         text-align: left;
-         vertical-align: bottom;
-         padding-top: 55px;
-         margin: 0 15px;
-         float: right;
-      }
-
+    footer .container {
+        margin: auto;
+        padding: 0;
     }
+
+    footer .footer-banner img {
+        width: 115%;
+        max-width: 215px;
+        min-width: 75px;
+    }
+
+    footer i {
+        padding: 10px 20px;
+        font-size: 22px;
+        vertical-align: middle;
+    }
+
+    footer a {
+        font-size: 14px;
+    }
+
+    footer p {
+        font-size: 12px;
+        text-align: left;
+        vertical-align: bottom;
+        padding-top: 55px;
+        margin: 0 15px;
+        float: right;
+    }
+}
