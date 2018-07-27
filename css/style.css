@@ -123,7 +123,7 @@ p {
 }
 
 .header-box .nav-banner {
-  max-width: 300px;
+  max-width: 600px;
   min-width: 200px;
 }
 
@@ -135,10 +135,17 @@ p {
 
 .scallop {
   position:relative;
-  background: #EEDFB8;
+  background: repeating-linear-gradient(
+    to right,
+    #F1E5C6,
+    #F1E5C6 10px,
+    #EEDFB8 10px,
+    #EEDFB8 20px
+  );
+
 }
 
-.scallop::after {
+/* .scallop::after {
   position:absolute;
   bottom: -50px;
   left: 0px;
@@ -149,34 +156,37 @@ p {
   background-size:50px 100px;
   height:50px;
   background-repeat: repeat-x;
-}
+}*/
 
 .after-scallop{
-  padding:25px;
+  padding:20px;
   margin: auto;
 }
 
 .menu-buttons .container{
-  width: 98%;
+  width: 100%;
   font-family: 'Lato';
   font-weight: bold;
   text-decoration: none;
-  margin: 0 auto;
-  text-align: center;
+  margin: 10px 0;
   display: block;
   font-size: 14pt;
+  background-color: #EEDFB8;
+  height: 3em;
 }
 
 .menu-buttons a {
   text-decoration:none;
-  color: #346C6C;
+  color: #5D5F29;
   float: left;
+  padding: 10px;
+  margin-left: 10px;
 }
 
 .menu-buttons .space {
-  padding: 0 15px;
+  padding: 10px 15px;
   float: left;
-  color: #346C6C;
+  color: #5D5F29;
 }
 
 .menu-buttons a:hover {
@@ -200,11 +210,10 @@ p {
 /* PHONE ORDER - all formats */
 .phone-order .container {
   background: #EEDFB8;
-  border-top: 1px dashed #A65215;
-  border-bottom: 1px dashed #A65215;
+  border-top: 2px dashed #A65215;
+  border-bottom: 2px dashed #A65215;
   padding: 20px 0;
-  outline: 1px dashed darken($color,10);
-  margin: 10px auto;
+  margin: 45px auto;
 }
 
 .phone-order h1 {
@@ -747,12 +756,12 @@ footer .footer-banner img{
     }
 
     .header-box .site-logo {
-        max-width: 130px;
+        max-width: 150px;
         min-width: 115px;
     }
 
     .header-box .nav-banner {
-        max-width: 560px;
+        max-width: 600px;
         min-width: 250px;
         padding-top: 0;
         padding-bottom: 0;
